@@ -6,40 +6,27 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import java.time.LocalDate;
 
-
+@Document(collection = "User")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "user")
 
 public class User {
-
  @Id
- String userId;
+ private String userId;
+ private String firstName;
+ private String lastName;
+ private String middleName;
+ private String phoneNumber;
+ private String email;
+ private LocalDate dateOfBirth;
+ private Gender gender;
+ private String employeeNumber;
+ private BloodGroup bloodGroup;
+ private String password;
 
- @NotBlank(message = "firstName cannot be empty")
- String firstName;
-
- String middleName;
- String lastName;
-
- @Size(min=10,max=10)
- String phoneNumber;
- String dateOfBirth;
- String gender;
- String martialStatus;
- String employeeNumber;
- String bloodGroup;
-
- @NotBlank(message = "email cannot be empty")
- String email;
-
- @NotBlank(message = "password cannot be empty")
- String password;
-
-
-
+ public User(String firstName, String lastName, String middleName, String phoneNumber, String email, LocalDate dateOfBirth, Gender gender) {
+ }
 }

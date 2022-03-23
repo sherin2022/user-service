@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.UserDTO;
+import com.example.demo.dto.UserRequest;
+import com.example.demo.exception.CustomCreateUserException;
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import javax.ws.rs.QueryParam;
 import java.util.List;
 
 @RestController
@@ -16,26 +20,35 @@ public class UserController {
     UserService userService;
 
     @PostMapping("/users")
-    public ResponseEntity<User> createUser(@Valid  @RequestBody User user){
-        return new ResponseEntity<User>(userService.createUser(user), HttpStatus.ACCEPTED);
+    public ResponseEntity<UserDTO> createUser(@Valid  @RequestBody UserRequest userRequest){
+        try {
+            return new ResponseEntity<>(userService.createUser(userRequest), HttpStatus.ACCEPTED);
+        }
+        catch (Exception e){
+            throw new CustomCreateUserException("Syntax Error");
+        }
     }
-
+/*
     @GetMapping("/users")
-    public ResponseEntity<List<User>> getUsers() {
-        return new ResponseEntity<List<User>>(userService.getUsers(), HttpStatus.FOUND);
-    }
+    public ResponseEntity<List<UserDTO>> getUsers(@QueryParam("page") int page, @QueryParam("pageSize") int pageSize){
+        return new ResponseEntity<>(userService.getUsers(page, pageSize),HttpStatus.OK);
+    }*/
+@GetMapping("/users")
+public ResponseEntity<List<UserDTO>> getUsers() {
+    return new ResponseEntity<>(userService.getUsers(), HttpStatus.FOUND);
+}
     @GetMapping("/users/{userId}")
-    public ResponseEntity<User> getUserDetails(@PathVariable("userId") String userId) {
-        return new ResponseEntity<User>(userService.getUserDetails(userId), HttpStatus.FOUND);
+    public ResponseEntity<UserDTO> getUserDetails(@PathVariable("userId") String userId) {
+        return new ResponseEntity<>(userService.getUserDetails(userId), HttpStatus.FOUND);
     }
     @PutMapping("users/{userId}")
-    public ResponseEntity<User> updateUser(@RequestBody User user, @PathVariable("userId") String userId){
-        return new ResponseEntity<User>(userService.updateUser(user, userId),HttpStatus.FOUND);
+    public ResponseEntity<UserDTO> updateUser(@RequestBody UserRequest userRequest, @PathVariable("userId") String userId){
+        return new ResponseEntity<>(userService.updateUser(userRequest, userId),HttpStatus.FOUND);
     }
 
     @DeleteMapping("users/{userId}")
-    public ResponseEntity<User> deleteUser(@PathVariable("userId") String userId){
-        return new ResponseEntity<User>(userService.deleteUser(userId),HttpStatus.FOUND);
+    public ResponseEntity<String> deleteUser(@PathVariable("userId") String userId){
+        return new ResponseEntity<>(userService.deleteUser(userId),HttpStatus.FOUND);
     }
 
 
