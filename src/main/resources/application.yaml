@@ -19,4 +19,5 @@ spring:
       database: userDB
       port: 27017
   feign:
-    circuitbreaker: true
+    circuitbreaker:
+      enable : true

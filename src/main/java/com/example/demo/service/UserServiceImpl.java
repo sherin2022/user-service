@@ -46,9 +46,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUserDetails(String id) {
+    public UserDto getUserDetails(String id) {
         User userInfo = userRepo.findById(id).get();
-        return userInfo;
+        UserDto userDtoInfo = new UserDto(userInfo.getId(),userInfo.getFirstName(),userInfo.getLastName(),userInfo.getMiddleName(),userInfo.getPhoneNumber(),userInfo.getEmail(),userInfo.getAddress(),userInfo.getDateOfBirth(),userInfo.getEmployeeId(),userInfo.getBloodGroup(),userInfo.getGender());
+        return userDtoInfo;
     }
 
     @Override

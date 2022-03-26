@@ -11,7 +11,7 @@ public interface UserService {
 
     UserDto createUser(UserRequest userRequest);
     List<UserDto> getUsers();
-    public User getUserDetails(String id);
+    public UserDto getUserDetails(String id);
     User updateUser(UserRequest user,String userId);
     String deleteUser(String id);
     UserDto getUserById(String userId);
