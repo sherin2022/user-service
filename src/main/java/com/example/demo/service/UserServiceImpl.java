@@ -31,6 +31,7 @@ public class UserServiceImpl implements UserService {
         newUser.setEmployeeId(userRequest.getEmployeeId());
         newUser.setBloodGroup(userRequest.getBloodGroup());
         newUser.setPassword(userRequest.getPassword());
+        newUser.setAddress(userRequest.getAddress());
         newUser = userRepo.save(newUser);
         return new UserDto(newUser.getId(), newUser.getFirstName(), newUser.getLastName(), newUser.getMiddleName(), newUser.getPhoneNumber(), newUser.getEmail(), newUser.getAddress(), newUser.getDateOfBirth(), newUser.getEmployeeId(), newUser.getBloodGroup(), newUser.getGender());
     }
@@ -46,23 +47,33 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUserDetails(String id) {
+    public UserDto getUserDetails(String id) {
         User userInfo = userRepo.findById(id).get();
-        return userInfo;
+        UserDto userDtoInfo = new UserDto(userInfo.getId(),userInfo.getFirstName(),userInfo.getLastName(),userInfo.getMiddleName(),userInfo.getPhoneNumber(),userInfo.getEmail(),userInfo.getAddress(),userInfo.getDateOfBirth(),userInfo.getEmployeeId(),userInfo.getBloodGroup(),userInfo.getGender());
+        return userDtoInfo;
     }
 
     @Override
     public User updateUser(UserRequest userRequest, String userId) {
         Optional<User> userToBeUpdated = userRepo.findById(userId);
-        userToBeUpdated.get().setFirstName(userRequest.getFirstName());
-        userToBeUpdated.get().setMiddleName(userRequest.getMiddleName());
-        userToBeUpdated.get().setLastName(userRequest.getLastName());
-        userToBeUpdated.get().setGender(userRequest.getGender());
-        userToBeUpdated.get().setBloodGroup(userRequest.getBloodGroup());
-        userToBeUpdated.get().setDateOfBirth(userRequest.getDateOfBirth());
-        userToBeUpdated.get().setEmail(userRequest.getEmail());
-        userToBeUpdated.get().setPassword(userRequest.getPassword());
-        userToBeUpdated.get().setPhoneNumber(userRequest.getPhoneNumber());
+        if(userRequest.getFirstName()!=null)
+            userToBeUpdated.get().setFirstName(userRequest.getFirstName());
+        if(userRequest.getMiddleName()!=null)
+            userToBeUpdated.get().setMiddleName(userRequest.getMiddleName());
+        if(userRequest.getLastName()!=null)
+            userToBeUpdated.get().setLastName(userRequest.getLastName());
+        if(userRequest.getGender()!=null)
+            userToBeUpdated.get().setGender(userRequest.getGender());
+        if(userRequest.getBloodGroup()!=null)
+         userToBeUpdated.get().setBloodGroup(userRequest.getBloodGroup());
+        if(userRequest.getDateOfBirth()!=null)
+            userToBeUpdated.get().setDateOfBirth(userRequest.getDateOfBirth());
+        if(userRequest.getEmail()!=null)
+            userToBeUpdated.get().setEmail(userRequest.getEmail());
+        if(userRequest.getPassword()!=null)
+            userToBeUpdated.get().setPassword(userRequest.getPassword());
+        if(userRequest.getPhoneNumber()!=null)
+            userToBeUpdated.get().setPhoneNumber(userRequest.getPhoneNumber());
         return userRepo.save(userToBeUpdated.get());
 
     }

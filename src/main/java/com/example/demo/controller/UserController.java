@@ -35,8 +35,8 @@ public class UserController {
     }
     //To get a user with a particular userId
     @GetMapping("/{userId}")
-    public ResponseEntity<User> getUserDetails(@PathVariable("userId") String userId) {
-        return new ResponseEntity<User>(userService.getUserDetails(userId), HttpStatus.FOUND);
+    public UserDto getUserDetails(@PathVariable("userId") String userId) {
+        return userService.getUserDetails(userId);
     }
     //To update a user record.
     @PutMapping("/{userId}")

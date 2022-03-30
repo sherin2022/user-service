@@ -15,8 +15,10 @@ spring:
     discovery:
       enabled: true
   data:
-    mongobd:
+    mongodb:
       database: userDB
       port: 27017
+#      host: host.docker.internal
   feign:
-    circuitbreaker: true
+    circuitbreaker:
+      enable : true
