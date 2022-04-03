@@ -18,7 +18,7 @@ public class UserDTO {
     private String phoneNumber;
     private String email;
     private LocalDate dateOfBirth;
-    private String employeeNumber;
+    private String employeeId;
     private BloodGroup bloodGroup;
     private Gender gender;
 }

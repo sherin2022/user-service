@@ -37,7 +37,7 @@ public class UserRequest {
     private Gender gender;
     @NotBlank(message = "Employee num should not be blank")
     @NotNull(message = "Employee num should not be null")
-    private String employeeNumber;
+    private String employeeId;
     private BloodGroup bloodGroup;
     @NotEmpty(message = "password should not be empty")
     @Size(min = 4, message = "password should have at least 8 characters")

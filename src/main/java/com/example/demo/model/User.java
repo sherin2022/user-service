@@ -23,10 +23,7 @@ public class User {
  private String email;
  private LocalDate dateOfBirth;
  private Gender gender;
- private String employeeNumber;
+ private String employeeId;
  private BloodGroup bloodGroup;
  private String password;
-
- public User(String firstName, String lastName, String middleName, String phoneNumber, String email, LocalDate dateOfBirth, Gender gender) {
- }
 }

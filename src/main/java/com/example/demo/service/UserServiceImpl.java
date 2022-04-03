@@ -1,6 +1,7 @@
 package com.example.demo.service;
 import com.example.demo.dto.UserDTO;
 import com.example.demo.dto.UserRequest;
+import com.example.demo.exception.EmailAlreadyExistException;
 import com.example.demo.exception.UserNotFoundException;
 import com.example.demo.model.User;
 import com.example.demo.repo.UserRepo;
@@ -33,16 +34,21 @@ public class UserServiceImpl implements UserService
         user.setLastName(userRequest.getLastName());
         user.setMiddleName(userRequest.getMiddleName());
         user.setPhoneNumber(userRequest.getPhoneNumber());
-        user.setEmail(userRequest.getEmail());
+        if(userRepo.findByEmail(userRequest.getEmail()).isPresent()){
+            throw new EmailAlreadyExistException(EMAILALREADYEXIST);
+        }
+        else {
+            user.setEmail(userRequest.getEmail());
+        }
         user.setDateOfBirth(userRequest.getDateOfBirth());
         user.setGender(userRequest.getGender());
-        user.setEmployeeNumber(userRequest.getEmployeeNumber());
+        user.setEmployeeId(userRequest.getEmployeeId());
         user.setBloodGroup(userRequest.getBloodGroup());
         user.setPassword(userRequest.getPassword());
         user = userRepo.save(user);
         
 
-        return new UserDTO(user.getUserId(), user.getFirstName(),user.getLastName(),user.getMiddleName(),user.getPhoneNumber(),user.getEmail(),user.getDateOfBirth(),user.getEmployeeNumber(),user.getBloodGroup(),user.getGender());
+        return new UserDTO(user.getUserId(), user.getFirstName(),user.getLastName(),user.getMiddleName(),user.getPhoneNumber(),user.getEmail(),user.getDateOfBirth(),user.getEmployeeId(),user.getBloodGroup(),user.getGender());
 
 
     }
@@ -53,7 +59,7 @@ public class UserServiceImpl implements UserService
 
             List<UserDTO> userDtoList = new ArrayList<>();
             for (User user1 : users) {
-                userDtoList.add(new UserDTO(user1.getUserId(), user1.getFirstName(), user1.getLastName(), user1.getMiddleName(), user1.getPhoneNumber(), user1.getEmail(), user1.getDateOfBirth(), user1.getEmployeeNumber(), user1.getBloodGroup(), user1.getGender()));
+                userDtoList.add(new UserDTO(user1.getUserId(), user1.getFirstName(), user1.getLastName(), user1.getMiddleName(), user1.getPhoneNumber(), user1.getEmail(), user1.getDateOfBirth(), user1.getEmployeeId(), user1.getBloodGroup(), user1.getGender()));
             }
             if(userDtoList.isEmpty()){
                 throw new UserNotFoundException(NOUSERFOUND);
@@ -66,12 +72,13 @@ public class UserServiceImpl implements UserService
 
         if (user.isPresent()) {
     User user1 = user.get();
-    return new UserDTO(user1.getUserId(), user1.getFirstName(), user1.getLastName(), user1.getMiddleName(), user1.getPhoneNumber(), user1.getEmail(), user1.getDateOfBirth(), user1.getEmployeeNumber(), user1.getBloodGroup(), user1.getGender());
-}
+    return new UserDTO(user1.getUserId(), user1.getFirstName(), user1.getLastName(), user1.getMiddleName(), user1.getPhoneNumber(), user1.getEmail(), user1.getDateOfBirth(), user1.getEmployeeId(), user1.getBloodGroup(), user1.getGender());
+        }
         else{
     throw new UserNotFoundException(USERNOTFOUND + id);
+       }
 }
-}
+
     @Override
     public UserDTO updateUser(UserRequest userRequest,String userId) {
         Optional<User> user2 = userRepo.findById(userId);
@@ -87,7 +94,7 @@ public class UserServiceImpl implements UserService
             user.setBloodGroup(userRequest.getBloodGroup());
             user.setPassword(userRequest.getPassword());
             userRepo.save(user);
-            return new UserDTO(user.getUserId(), user.getFirstName(), user.getLastName(), user.getMiddleName(), user.getPhoneNumber(), user.getEmail(), user.getDateOfBirth(), user.getEmployeeNumber(), user.getBloodGroup(), user.getGender());
+            return new UserDTO(user.getUserId(), user.getFirstName(), user.getLastName(), user.getMiddleName(), user.getPhoneNumber(), user.getEmail(), user.getDateOfBirth(), user.getEmployeeId(), user.getBloodGroup(), user.getGender());
         }
         else{
             throw new UserNotFoundException(USERNOTFOUND + userId);
@@ -107,6 +114,17 @@ public class UserServiceImpl implements UserService
             throw new UserNotFoundException(USERNOTFOUND + id);
         }
     }
+    @Override
+    public UserDTO getUserDetailsByEmail(String emailId) {
+        Optional<User> user = userRepo.findByEmail(emailId);
 
+        if (user.isPresent()) {
+            User user1 = user.get();
+            return new UserDTO(user1.getUserId(), user1.getFirstName(), user1.getLastName(), user1.getMiddleName(), user1.getPhoneNumber(), user1.getEmail(), user1.getDateOfBirth(), user1.getEmployeeId(), user1.getBloodGroup(), user1.getGender());
+        }
+        else{
+            throw new UserNotFoundException(USERNOTFOUND + emailId);
+        }
+    }
 
 }
