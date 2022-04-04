@@ -1,170 +1,110 @@
-2022-04-01 11:15:34.423  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 11:20:34.457  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 11:25:34.459  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 11:30:34.462  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 11:39:42.634  INFO 27092 --- [cluster-ClusterId{value='62459193e1d34450029c2f0a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
-
-com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
-	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:701) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:579) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:415) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:374) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:216) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.2.jar:na]
-	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_322]
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_322]
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_322]
-	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_322]
-	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_322]
-	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:109) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:718) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:576) ~[mongodb-driver-core-4.4.2.jar:na]
-	... 5 common frames omitted
-
-2022-04-01 11:39:42.670  INFO 27092 --- [cluster-ClusterId{value='62459193e1d34450029c2f0a', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:176}] to localhost:27017
-2022-04-01 11:39:42.671  INFO 27092 --- [cluster-ClusterId{value='62459193e1d34450029c2f0a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=26128800}
-2022-04-01 11:40:06.282  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 11:45:06.295  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 12:10:41.632  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 12:15:41.644  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 12:20:41.661  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 12:25:41.678  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 12:30:41.685  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 12:35:41.697  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 12:40:41.714  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 12:45:41.738  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 12:50:41.749  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 12:52:45.538  INFO 27092 --- [http-nio-3005-exec-4] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:190}] to localhost:27017
-2022-04-01 12:55:41.770  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 13:00:41.781  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 13:05:41.796  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 13:10:41.804  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 13:15:41.810  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 13:20:41.825  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 13:25:41.831  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 13:30:41.835  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 13:35:41.841  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 13:40:41.857  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 14:24:57.205  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 14:29:57.207  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 14:32:23.287  INFO 27092 --- [cluster-ClusterId{value='62459193e1d34450029c2f0a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
-
-com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
-	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:701) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:579) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:415) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:374) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:216) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.2.jar:na]
-	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_322]
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_322]
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_322]
-	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_322]
-	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_322]
-	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:109) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:718) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:576) ~[mongodb-driver-core-4.4.2.jar:na]
-	... 5 common frames omitted
-
-2022-04-01 14:32:23.294  INFO 27092 --- [cluster-ClusterId{value='62459193e1d34450029c2f0a', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:216}] to localhost:27017
-2022-04-01 14:32:23.295  INFO 27092 --- [cluster-ClusterId{value='62459193e1d34450029c2f0a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1491800}
-2022-04-01 14:35:13.560  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 15:02:49.378  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 15:31:21.672  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 15:36:21.685  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 15:41:21.699  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 15:46:21.706  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 15:49:01.080  INFO 27092 --- [http-nio-3005-exec-10] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:227}] to localhost:27017
-2022-04-01 15:51:21.717  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 15:56:21.731  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 17:28:31.891  INFO 27092 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 17:30:19.978  INFO 27092 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-SERVICE with eureka with status DOWN
-2022-04-01 17:30:19.978  INFO 27092 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648814419978, current=DOWN, previous=UP]
-2022-04-01 17:30:19.979  INFO 27092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005: registering service...
-2022-04-01 17:30:20.012  INFO 27092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005 - registration status: 204
-2022-04-01 17:30:20.400  INFO 27092 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2022-04-01 17:30:23.426  INFO 27092 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2022-04-01 17:30:23.441  INFO 27092 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005 - deregister  status: 200
-2022-04-01 17:30:23.448  INFO 27092 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2022-04-01 17:30:31.045  INFO 8852 --- [main] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 1.8.0_322 on MAVBNG1121239 with PID 8852 (C:\Users\savitago\Downloads\user-service\target\classes started by savitago in C:\Users\savitago\Downloads\user-service)
-2022-04-01 17:30:31.048  INFO 8852 --- [main] com.example.demo.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2022-04-01 17:30:31.797  INFO 8852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-04-01 17:30:31.970  INFO 8852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 167 ms. Found 1 MongoDB repository interfaces.
-2022-04-01 17:30:32.176  INFO 8852 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f5b01e53-b39d-36e6-af5d-044cbf3ec150
-2022-04-01 17:30:32.912  INFO 8852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3005 (http)
-2022-04-01 17:30:32.922  INFO 8852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-01 17:30:32.922  INFO 8852 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-01 17:30:33.055  INFO 8852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-01 17:30:33.055  INFO 8852 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1953 ms
-2022-04-01 17:30:33.222  INFO 8852 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-04-01 17:30:33.294  INFO 8852 --- [cluster-ClusterId{value='6246e9619966271e4edd2390', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:272}] to localhost:27017
-2022-04-01 17:30:33.294  INFO 8852 --- [cluster-rtt-ClusterId{value='6246e9619966271e4edd2390', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:273}] to localhost:27017
-2022-04-01 17:30:33.295  INFO 8852 --- [cluster-ClusterId{value='6246e9619966271e4edd2390', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=21468300}
-2022-04-01 17:30:33.349  WARN 8852 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2022-04-01 17:30:33.491  WARN 8852 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2022-04-01 17:30:34.567  INFO 8852 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2022-04-01 17:30:35.510  WARN 8852 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-01 17:30:35.541  INFO 8852 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2022-04-01 17:30:35.661  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2022-04-01 17:30:35.673  INFO 8852 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 17:30:35.734  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2022-04-01 17:30:35.735  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2022-04-01 17:30:35.736  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2022-04-01 17:30:35.736  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2022-04-01 17:30:35.736  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2022-04-01 17:30:35.736  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2022-04-01 17:30:35.737  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2022-04-01 17:30:36.375  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2022-04-01 17:30:36.379  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2022-04-01 17:30:36.382  INFO 8852 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-01 17:30:36.389  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648814436387 with initial instances count: 5
-2022-04-01 17:30:36.391  INFO 8852 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
-2022-04-01 17:30:36.392  INFO 8852 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648814436392, current=UP, previous=STARTING]
-2022-04-01 17:30:36.395  INFO 8852 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005: registering service...
-2022-04-01 17:30:36.426  INFO 8852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3005 (http) with context path ''
-2022-04-01 17:30:36.427  INFO 8852 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3005
-2022-04-01 17:30:36.451  INFO 8852 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005 - registration status: 204
-2022-04-01 17:30:36.973  INFO 8852 --- [main] com.example.demo.UserServiceApplication  : Started UserServiceApplication in 6.88 seconds (JVM running for 7.396)
-2022-04-01 17:30:51.671  INFO 8852 --- [http-nio-3005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-01 17:30:51.672  INFO 8852 --- [http-nio-3005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-01 17:30:51.674  INFO 8852 --- [http-nio-3005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-04-01 17:33:51.122  INFO 8852 --- [http-nio-3005-exec-9] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:274}] to localhost:27017
-2022-04-01 17:35:35.742  INFO 8852 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 17:40:35.760  INFO 8852 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 17:45:35.770  INFO 8852 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-04-01 19:03:18.239  INFO 8852 --- [cluster-ClusterId{value='6246e9619966271e4edd2390', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
-
-com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
-	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:701) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:579) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:415) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:374) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:216) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.2.jar:na]
-	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_322]
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_322]
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_322]
-	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_322]
-	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_322]
-	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:109) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:718) ~[mongodb-driver-core-4.4.2.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:576) ~[mongodb-driver-core-4.4.2.jar:na]
-	... 5 common frames omitted
-
-2022-04-01 19:03:18.664  INFO 8852 --- [cluster-ClusterId{value='6246e9619966271e4edd2390', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:286}] to localhost:27017
-2022-04-01 19:03:18.665  INFO 8852 --- [cluster-ClusterId{value='6246e9619966271e4edd2390', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4058000}
-2022-04-01 19:04:19.197  INFO 8852 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-SERVICE with eureka with status DOWN
-2022-04-01 19:04:19.198  INFO 8852 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648820059198, current=DOWN, previous=UP]
-2022-04-01 19:04:19.200  INFO 8852 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005: registering service...
-2022-04-01 19:04:19.228  INFO 8852 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005 - registration status: 204
-2022-04-01 19:04:19.504  INFO 8852 --- [SpringApplicationShutdownHook] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:290}] to localhost:27017
-2022-04-01 19:04:19.507  INFO 8852 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2022-04-01 19:04:22.511  INFO 8852 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2022-04-01 19:04:22.526  INFO 8852 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005 - deregister  status: 200
-2022-04-01 19:04:22.533  INFO 8852 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-04-04 15:15:57.227  INFO 4424 --- [main] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 1.8.0_322 on MAVBNG1121239 with PID 4424 (C:\Users\savitago\Downloads\user-service\target\classes started by savitago in C:\Users\savitago\Downloads\user-service)
+2022-04-04 15:15:57.234  INFO 4424 --- [main] com.example.demo.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-04-04 15:15:57.831  INFO 4424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-04-04 15:15:57.983  INFO 4424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147 ms. Found 1 MongoDB repository interfaces.
+2022-04-04 15:15:58.178  INFO 4424 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f5b01e53-b39d-36e6-af5d-044cbf3ec150
+2022-04-04 15:15:58.785  INFO 4424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3005 (http)
+2022-04-04 15:15:58.795  INFO 4424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-04 15:15:58.795  INFO 4424 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-04 15:15:58.909  INFO 4424 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-04 15:15:58.909  INFO 4424 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1624 ms
+2022-04-04 15:15:59.056  INFO 4424 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-04-04 15:15:59.122  INFO 4424 --- [cluster-ClusterId{value='624abe57d76fef437620b221', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:17}] to localhost:27017
+2022-04-04 15:15:59.122  INFO 4424 --- [cluster-rtt-ClusterId{value='624abe57d76fef437620b221', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:16}] to localhost:27017
+2022-04-04 15:15:59.122  INFO 4424 --- [cluster-ClusterId{value='624abe57d76fef437620b221', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=20323500}
+2022-04-04 15:15:59.170  WARN 4424 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-04-04 15:15:59.273  WARN 4424 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-04-04 15:16:00.223  INFO 4424 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-04-04 15:16:00.750  WARN 4424 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-04-04 15:16:00.767  INFO 4424 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-04 15:16:00.855  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-04 15:16:00.860  INFO 4424 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 15:16:00.883  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-04-04 15:16:00.884  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-04-04 15:16:00.884  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-04-04 15:16:00.884  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-04-04 15:16:00.884  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-04-04 15:16:00.884  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-04-04 15:16:00.884  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-04-04 15:16:01.229  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-04-04 15:16:01.231  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-04-04 15:16:01.233  INFO 4424 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-04 15:16:01.237  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1649065561235 with initial instances count: 2
+2022-04-04 15:16:01.238  INFO 4424 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2022-04-04 15:16:01.239  INFO 4424 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1649065561239, current=UP, previous=STARTING]
+2022-04-04 15:16:01.240  INFO 4424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005: registering service...
+2022-04-04 15:16:01.261  INFO 4424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3005 (http) with context path ''
+2022-04-04 15:16:01.262  INFO 4424 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3005
+2022-04-04 15:16:01.278  INFO 4424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005 - registration status: 204
+2022-04-04 15:16:01.598  INFO 4424 --- [main] com.example.demo.UserServiceApplication  : Started UserServiceApplication in 5.099 seconds (JVM running for 5.563)
+2022-04-04 15:16:48.464  INFO 4424 --- [http-nio-3005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-04 15:16:48.464  INFO 4424 --- [http-nio-3005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-04 15:16:48.465  INFO 4424 --- [http-nio-3005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-04-04 15:16:48.664  INFO 4424 --- [http-nio-3005-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:18}] to localhost:27017
+2022-04-04 15:21:00.900  INFO 4424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 15:26:00.909  INFO 4424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 15:31:00.922  INFO 4424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 15:36:00.935  INFO 4424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 15:38:48.974  INFO 4424 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-SERVICE with eureka with status DOWN
+2022-04-04 15:38:48.975  INFO 4424 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1649066928975, current=DOWN, previous=UP]
+2022-04-04 15:38:48.975  INFO 4424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005: registering service...
+2022-04-04 15:38:48.998  INFO 4424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005 - registration status: 204
+2022-04-04 15:38:49.443  INFO 4424 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-04-04 15:38:52.453  INFO 4424 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-04-04 15:38:52.470  INFO 4424 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005 - deregister  status: 200
+2022-04-04 15:38:52.476  INFO 4424 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-04-04 15:39:02.754  INFO 6548 --- [main] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 1.8.0_322 on MAVBNG1121239 with PID 6548 (C:\Users\savitago\Downloads\user-service\target\classes started by savitago in C:\Users\savitago\Downloads\user-service)
+2022-04-04 15:39:02.760  INFO 6548 --- [main] com.example.demo.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-04-04 15:39:04.319  INFO 6548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-04-04 15:39:04.611  INFO 6548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 281 ms. Found 1 MongoDB repository interfaces.
+2022-04-04 15:39:04.992  INFO 6548 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f5b01e53-b39d-36e6-af5d-044cbf3ec150
+2022-04-04 15:39:06.231  INFO 6548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3005 (http)
+2022-04-04 15:39:06.248  INFO 6548 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-04 15:39:06.250  INFO 6548 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-04 15:39:06.461  INFO 6548 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-04 15:39:06.462  INFO 6548 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3527 ms
+2022-04-04 15:39:06.744  INFO 6548 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-04-04 15:39:06.859  INFO 6548 --- [cluster-ClusterId{value='624ac3c2f144403ea8592066', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:22}] to localhost:27017
+2022-04-04 15:39:06.859  INFO 6548 --- [cluster-rtt-ClusterId{value='624ac3c2f144403ea8592066', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:21}] to localhost:27017
+2022-04-04 15:39:06.861  INFO 6548 --- [cluster-ClusterId{value='624ac3c2f144403ea8592066', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=35830500}
+2022-04-04 15:39:06.953  WARN 6548 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-04-04 15:39:07.167  WARN 6548 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-04-04 15:39:09.308  INFO 6548 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-04-04 15:39:10.462  WARN 6548 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-04-04 15:39:10.498  INFO 6548 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-04 15:39:10.621  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-04 15:39:10.634  INFO 6548 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 15:39:10.678  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-04-04 15:39:10.679  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-04-04 15:39:10.679  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-04-04 15:39:10.679  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-04-04 15:39:10.679  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-04-04 15:39:10.679  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-04-04 15:39:10.679  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-04-04 15:39:11.478  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-04-04 15:39:11.487  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-04-04 15:39:11.493  INFO 6548 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-04 15:39:11.503  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1649066951501 with initial instances count: 2
+2022-04-04 15:39:11.509  INFO 6548 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2022-04-04 15:39:11.510  INFO 6548 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1649066951510, current=UP, previous=STARTING]
+2022-04-04 15:39:11.515  INFO 6548 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005: registering service...
+2022-04-04 15:39:11.562  INFO 6548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3005 (http) with context path ''
+2022-04-04 15:39:11.565  INFO 6548 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3005
+2022-04-04 15:39:11.604  INFO 6548 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/host.docker.internal:user-service:3005 - registration status: 204
+2022-04-04 15:39:12.450  INFO 6548 --- [main] com.example.demo.UserServiceApplication  : Started UserServiceApplication in 11.225 seconds (JVM running for 11.999)
+2022-04-04 15:39:17.031  INFO 6548 --- [http-nio-3005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-04 15:39:17.031  INFO 6548 --- [http-nio-3005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-04 15:39:17.032  INFO 6548 --- [http-nio-3005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-04 15:39:17.250  INFO 6548 --- [http-nio-3005-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:23}] to localhost:27017
+2022-04-04 15:44:10.688  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 15:49:10.696  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 15:54:10.702  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 15:59:10.709  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 16:04:10.717  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 16:09:10.728  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 16:14:10.732  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 16:19:10.748  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 16:24:10.763  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 16:29:10.771  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 16:34:10.785  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-04 16:39:10.789  INFO 6548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
