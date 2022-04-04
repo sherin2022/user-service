@@ -15,8 +15,13 @@ spring:
     discovery:
       enabled: true
   data:
-    mongobd:
+    mongodb:
       database: userDB
       port: 27017
-  feign:
-    circuitbreaker: true
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+feign:
+  circuitbreaker:
+    enabled : true
