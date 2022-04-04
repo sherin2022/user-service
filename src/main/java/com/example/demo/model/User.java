@@ -7,6 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Document(collection = "User")
 @Data
@@ -21,7 +22,7 @@ public class User {
  private String middleName;
  private String phoneNumber;
  private String email;
- private LocalDate dateOfBirth;
+ private Date dateOfBirth;
  private Gender gender;
  private String employeeId;
  private BloodGroup bloodGroup;

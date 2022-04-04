@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.*;
 import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -33,7 +34,7 @@ public class UserRequest {
     @Email(message = "Please enter a valid email address")
     private String email;
     @JsonFormat(pattern="yyyy-MM-dd")
-    private LocalDate dateOfBirth;
+    private Date dateOfBirth;
     private Gender gender;
     @NotBlank(message = "Employee num should not be blank")
     @NotNull(message = "Employee num should not be null")
