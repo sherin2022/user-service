@@ -41,7 +41,7 @@ public class User {
     private String Address;
     @NotBlank
     @NotNull
-    private LocalDate dateOfBirth;
+    private Date dateOfBirth;
     @NotBlank
     @NotNull
     private String employeeId;
