@@ -82,15 +82,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public User updateUser(UserRequest userRequest, String userId) {
         Optional<User> userToBeUpdated = userRepo.findById(userId);
-        userToBeUpdated.get().setFirstName(userRequest.getFirstName());
-        userToBeUpdated.get().setMiddleName(userRequest.getMiddleName());
-        userToBeUpdated.get().setLastName(userRequest.getLastName());
-        userToBeUpdated.get().setGender(userRequest.getGender());
-        userToBeUpdated.get().setBloodGroup(userRequest.getBloodGroup());
-        userToBeUpdated.get().setDateOfBirth(userRequest.getDateOfBirth());
-        userToBeUpdated.get().setEmail(userRequest.getEmail());
-        userToBeUpdated.get().setPassword(userRequest.getPassword());
-        userToBeUpdated.get().setPhoneNumber(userRequest.getPhoneNumber());
+            
+            userToBeUpdated.get().setFirstName(userRequest.getFirstName());
+            userToBeUpdated.get().setMiddleName(userRequest.getMiddleName());
+            userToBeUpdated.get().setLastName(userRequest.getLastName());
+            userToBeUpdated.get().setGender(userRequest.getGender());
+            userToBeUpdated.get().setBloodGroup(userRequest.getBloodGroup());
+            userToBeUpdated.get().setDateOfBirth(userRequest.getDateOfBirth());
+            userToBeUpdated.get().setEmail(userRequest.getEmail());
+            userToBeUpdated.get().setPassword(userRequest.getPassword());
+            userToBeUpdated.get().setPhoneNumber(userRequest.getPhoneNumber());
         return userRepo.save(userToBeUpdated.get());
 
     }
