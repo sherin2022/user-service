@@ -8,27 +8,46 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
 import java.util.Date;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
 
-@NoArgsConstructor
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class UserRequest {
-    private String id;
-    private String firstName;
-    private String lastName;
-    private String middleName;
-    private String phoneNumber;
-    private String email;
-    private String Address;
 
-    @JsonDeserialize(using = LocalDateDeserializer.class)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private String id;
+    @NotBlank(message = "First name must not be blank")
+    @NotNull(message = "First name should not be null")
+    private String firstName;
+    @NotBlank(message = "Last name must not be blank")
+    @NotNull(message = "Last name should not be null")
+    private String lastName;
+    @NotBlank(message = "Middle name must not be blank")
+    @NotNull(message = "Middle name should not be null")
+    private String middleName;
+    @NotBlank(message = "Phone number must not be blank")
+    @NotNull(message = "Phone number should not be null")
+    @Size(min = 10, max = 10, message = "Phone number should be a 10 digit number")
+    private String phoneNumber;
+    @NotBlank(message = "Email should not be blank")
+    @NotNull(message = "Email should not be null")
+    @Email(message = "Please enter a valid email address")
+    private String email;
+    @NotBlank(message = "Address should not be blank")
+    @NotNull(message = "Address should not be null")
+    private String address;
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date dateOfBirth;
+    private Gender gender;
+    @NotBlank(message = "Employee number should not be blank")
+    @NotNull(message = "Employee number should not be null")
     private String employeeId;
     private BloodGroup bloodGroup;
-    private Gender gender;
+    @NotEmpty(message = "Password should not be empty")
+    @Size(min = 4, message = "Password should have at least 8 characters")
     private String password;
+
+
 }

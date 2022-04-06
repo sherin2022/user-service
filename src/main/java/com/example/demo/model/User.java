@@ -7,10 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 import java.util.Date;
 
 @Document(collection="user")
@@ -18,7 +16,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
-
     @Id
     private String id;
     @NotBlank(message = "Please Enter a name") //Need to understand how validation works from a front-end point
@@ -38,7 +35,7 @@ public class User {
     private String email;
     @NotBlank
     @NotNull
-    private String Address;
+    private String address;
     @NotBlank
     @NotNull
     private Date dateOfBirth;
@@ -53,9 +50,7 @@ public class User {
     private Gender gender;
     @NotBlank
     @NotNull
-    private String Password;
-
-
+    private String password;
 
 
 }
