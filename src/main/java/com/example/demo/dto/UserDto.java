@@ -1,23 +1,26 @@
 package com.example.demo.dto;
-import com.example.demo.model.BloodGroup;
-import com.example.demo.model.Gender;
+
+import com.example.demo.enums.BloodGroup;
+import com.example.demo.enums.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class UserDTO {
-    private String userId;
+public class UserDto {
+    private String id;
     private String firstName;
     private String lastName;
     private String middleName;
     private String phoneNumber;
     private String email;
-    private LocalDate dateOfBirth;
+    private String address;
+    private Date dateOfBirth;
     private String employeeId;
     private BloodGroup bloodGroup;
     private Gender gender;
