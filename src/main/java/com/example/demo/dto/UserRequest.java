@@ -40,11 +40,11 @@ public class UserRequest {
     private String address;
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date dateOfBirth;
-    private Gender gender;
     @NotBlank(message = "Employee number should not be blank")
     @NotNull(message = "Employee number should not be null")
     private String employeeId;
     private BloodGroup bloodGroup;
+    private Gender gender;
     @NotEmpty(message = "Password should not be empty")
     @Size(min = 4, message = "Password should have at least 8 characters")
     private String password;
