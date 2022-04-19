@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
         newUser.setGender(userRequest.getGender());
         newUser.setEmployeeId(userRequest.getEmployeeId());
         newUser.setBloodGroup(userRequest.getBloodGroup());
-        newUser.setPassword(userRequest.getPassword());
+       newUser.setPassword(userRequest.getPassword());
         newUser = userRepo.save(newUser);
         return new UserDto(newUser.getId(), newUser.getFirstName(), newUser.getLastName(), newUser.getMiddleName(), newUser.getPhoneNumber(), newUser.getEmail(), newUser.getAddress(), newUser.getDateOfBirth(), newUser.getEmployeeId(), newUser.getBloodGroup(), newUser.getGender());
     }

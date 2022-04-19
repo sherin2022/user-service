@@ -22,8 +22,8 @@ public class UserController {
 
     //To add a new User record.
     @PostMapping
-    public UserDto createUser(@Valid @RequestBody UserRequest userRequest){
-        return userService.createUser(userRequest);
+    public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserRequest userRequest){
+        return new ResponseEntity<>(userService.createUser(userRequest),HttpStatus.CREATED);
     }
 
     //To get a new User

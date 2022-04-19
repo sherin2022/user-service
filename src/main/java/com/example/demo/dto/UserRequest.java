@@ -3,13 +3,10 @@ package com.example.demo.dto;
 import com.example.demo.enums.BloodGroup;
 import com.example.demo.enums.Gender;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.Date;
-import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 @Data
@@ -45,7 +42,8 @@ public class UserRequest {
     @NotNull(message = "Employee number should not be null")
     private String employeeId;
     private BloodGroup bloodGroup;
-    @NotEmpty(message = "Password should not be empty")
+   // @NotBlank(message = "password must not be blank")
+   // @NotNull(message = "password should not be null")
     @Size(min = 4, message = "Password should have at least 8 characters")
     private String password;
 
