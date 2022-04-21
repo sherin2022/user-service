@@ -10,7 +10,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class UserDto {
+public class UserWithoutPassword {
     private String id;
     private String firstName;
     private String lastName;
