@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
     public UserWithoutPassword createUser(UserRequest userRequest) {
 
         if (userRepo.findByEmail(userRequest.getEmail()).isPresent()) {
-            throw new EmailAlreadyExistException(EMAILALREADYEXIST);
+            throw new EmailAlreadyExistException(EMAILALREADYEXIST + userRequest.getEmail());
         }
         User newUser = new User();
         newUser.setFirstName(userRequest.getFirstName());
